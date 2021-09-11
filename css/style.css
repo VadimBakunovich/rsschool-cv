@@ -1,0 +1,264 @@
+﻿                                          /*Common*/
+html { 
+  box-sizing: border-box;
+  font-size: .1vh;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+.body {
+  margin-top: 1vh;
+  font-family: 'Roboto', Arial;
+  font-style: normal;
+  font-weight: normal;
+  background-color: #f3f3f3;
+}
+.common-wrapper {
+  display: grid;
+  grid-template-areas: "aside main"  
+                      "footer footer";
+  grid-template-columns: 290rem 441rem;
+  grid-template-rows: 875rem 50rem;
+  max-width: 741rem;
+  margin: 0 auto;
+}
+.title {
+  margin-bottom: 22rem;
+  font-size: 16rem;
+  font-weight: 800;
+  text-align: center;
+  color: #333;
+}
+.heading {
+  padding: 8rem;
+  margin-bottom: 22rem;
+  background-color: #c0d8de;
+}
+.list { list-style-type: none; }
+.regular-text {
+  font-size: 13rem;
+  line-height: 17rem;
+  font-weight: 400;
+}
+.bold-text {
+  font-size: 13rem;
+  line-height: 17rem;
+  font-weight: 600;
+  color: #333;
+}
+                                          /*Hide heading*/
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+                                          /*Aside*/
+.aside {
+  grid-area: aside;
+  max-width: 300rem;
+  padding: 30rem 33rem 15rem;
+  background-color: #c0d8de;
+  color: #555;
+}
+                                          /*Header*/
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 28rem;
+}
+.figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 7rem;
+}
+.avatar {
+  max-width: 200rem;
+  max-height: 200rem;
+  margin-bottom: 16rem;
+}
+.name-surname { font-size: 24rem; }
+.name {
+  font-weight: bold;
+  color: #222;
+}
+.surname { font-weight: 500; }
+.profession {
+  font-size: 12rem;
+  font-weight: 500;
+}
+                                          /*Profile*/
+.profile { margin-bottom: 30rem; }
+.profile__text {
+  color: #444;
+  text-align: justify;
+}
+                                          /*Contacts*/
+.contacts {
+  margin: 0 auto 30rem;
+  padding: 28rem 0 20rem 0;
+  max-width: 210rem;
+  border-top: 2px solid #888;
+  border-bottom: 2px solid #888;
+}
+.contacts-list__item { margin-bottom: 10rem; }
+.contacts-list__icon {
+  vertical-align: middle;
+  margin-right: 12rem;
+  font-size: 17rem;
+  font-weight: 500;
+  color: #222;
+}
+.contacts-list__descr {
+  vertical-align: middle;
+  font-size: 13rem;
+  font-weight: 400;
+  color: #444;
+}
+                                          /*Pers Skills*/
+.pers-skills__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 130rem;
+}
+.p-skills-list__item {
+  display: flex;
+  justify-content: space-between;
+}
+.p-skill {
+  font-weight: 500;
+  color: #444;
+}
+.dots { display: flex; }
+.dot {
+  font-size: 60rem;
+  line-height: 6rem;
+  font-weight: 500;
+  color: #222;
+}
+.dot--grey { color: #777; }
+                                          /*Main*/
+main {
+  grid-area: main;
+  padding: 30rem 37rem 30rem;
+  background-color: #e4e6e7;
+}
+                                          /*Education*/
+.main-sections { margin-bottom: 22rem; }
+.icon {
+  margin-right: 10rem;
+  vertical-align: middle;
+  font-size: 20rem;
+  color: #555;
+}
+.e-list__item {
+  margin-bottom: 7rem;
+}
+.year {
+  margin-right: 3rem;
+}
+.courses {
+  padding: 7rem 0 0 55rem;
+  list-style-type: disc;
+}
+.courses__item { margin-bottom: 4rem; }
+                                          /*Pro Skills*/
+.pro-skills__graphs {
+  display: grid;
+  grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+  grid-gap: 15rem 70rem;
+}
+.pro-skills__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pro-skills__graph {
+  display: flex;
+  width: 80rem;
+  height: 7rem;
+}
+.graph--black { background-color: #444; }
+.graph--grey { background-color: #999; }
+.html-graph__black { width: 90%; }
+.html-graph__grey { width: 10%; }
+.css-graph__black { width: 85%; }
+.css-graph__grey { width: 15%; }
+.js-graph__black { width: 70%; }
+.js-graph__grey { width: 30%; }
+.git-graph__black { width: 70%; }
+.git-graph__grey { width: 30%; }
+.react-graph__black { width: 40%; }
+.react-graph__grey { width: 60%; }
+.node-graph__black { width: 20%; }
+.node-graph__grey { width: 80%; }
+                                          /*Code Example*/
+.code-example__wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.flex-item { display: flex; }
+.example-descr { margin-right: 3rem; }
+.example-ref { text-decoration: none; }
+                                          /*Languages*/
+.languages__list {
+  display: flex;
+  justify-content: space-between;
+}
+                                          /*Hobbies*/
+.hobbies-list {
+  display: flex;
+  justify-content: space-around;
+}
+.hobby {
+  height: 47rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hobby__icon {
+  align-self: center;
+  font-size: 24rem;
+  font-weight: 600;
+  color: #333;
+}
+                                          /*Footer*/
+.footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8rem 18rem;
+  background-color: #b3b3b3;
+}
+.ref {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.rsschool-logo {
+  width: 70rem;
+  height: 25rem;
+}
+.footer__year {
+  font-size: 14rem;
+  color: white;
+}
+.github-text {
+  margin-right: 18rem;
+  font-size: 13rem;
+  color: white;
+}
+.github-logo {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+}
