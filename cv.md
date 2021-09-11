@@ -42,7 +42,7 @@ I like solving small problems on the way to a big goal. When building web applic
 
 -  **CSS** (with BEM methodology)
 
--  **JS** (ES6 syntax)
+-  **JS** (including ES6 syntax)
 
 -  **Git** & **GitHub** (basics)
 
