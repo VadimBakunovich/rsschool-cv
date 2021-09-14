@@ -1,7 +1,7 @@
 ﻿                                          /*Common*/
 html { 
   box-sizing: border-box;
-  font-size: .1vh;
+  scroll-behavior: smooth;
 }
 *,
 *::after,
@@ -10,45 +10,63 @@ html {
   margin: 0;
   padding: 0;
 }
+:root {
+  --light-grey: #f0f0f6;
+  --dark-grey: #3e3e3e;
+  --orange: #ffb400;
+  --orange: #ffa500;
+}
 .body {
-  margin-top: 1vh;
   font-family: 'Roboto', Arial;
   font-style: normal;
   font-weight: normal;
-  background-color: #f3f3f3;
+  font-size: 16px;
+  color: var(--dark-grey);
+  background-color: var(--light-grey);
+}
+.bg-wrapper {
+  position: relative;
+}
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../assets/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .common-wrapper {
-  display: grid;
-  grid-template-areas: "aside main"  
-                      "footer footer";
-  grid-template-columns: 290rem 441rem;
-  grid-template-rows: 875rem 50rem;
-  max-width: 741rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  max-width: 1500px;
   margin: 0 auto;
-}
-.title {
-  margin-bottom: 22rem;
-  font-size: 16rem;
-  font-weight: 800;
-  text-align: center;
-  color: #333;
-}
-.heading {
-  padding: 8rem;
-  margin-bottom: 22rem;
-  background-color: #c0d8de;
+  /* border: 1px solid black; */
 }
 .list { list-style-type: none; }
-.regular-text {
-  font-size: 13rem;
-  line-height: 17rem;
-  font-weight: 400;
+.text--orange {
+  color: var(--orange);
 }
-.bold-text {
-  font-size: 13rem;
-  line-height: 17rem;
-  font-weight: 600;
-  color: #333;
+.border {
+  border-top: 3px solid var(--light-grey);
+  margin-bottom: 30px;
+}
+.heading {
+  display: inline-block;
+  padding-bottom: 15px;
+  font-weight: 500;
+  font-size: 30px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.subheading {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 24px;
+  background-color: #fff;
 }
                                           /*Hide heading*/
 .visually-hidden {
@@ -58,207 +76,114 @@ html {
   height: 1px;
   margin: -1px;
 }
-                                          /*Aside*/
-.aside {
-  grid-area: aside;
-  max-width: 300rem;
-  padding: 30rem 33rem 15rem;
-  background-color: #c0d8de;
-  color: #555;
+                                          /*Menu*/
+.menu {
+  position: fixed;
+  margin-left: -120px;
+  font-size: 24px;
 }
-                                          /*Header*/
-.intro {
+.menu__list {
   display: flex;
   flex-direction: column;
+}
+.menu__item {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row-reverse;
   align-items: center;
-  margin: 0 auto 28rem;
 }
-.figure {
+.menu__link {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 7rem;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(145deg, #fff, #d8d8d8);
+  box-shadow:  6px 6px 12px #ccc,
+    -6px -6px 12px #fff;
+  /* background-color: #f0f0f6; */
+  /* border: 2px solid transparent; */
+  border-radius: 50%;
+  transition: all 250ms;
 }
-.avatar {
-  max-width: 200rem;
-  max-height: 200rem;
-  margin-bottom: 16rem;
+.menu__link:hover {
+  transform: scale(1.1, 1.1);
+  /* background-color: #ffb400; */
+  background: linear-gradient(145deg, #fff, var(--orange));
 }
-.name-surname { font-size: 24rem; }
-.name {
-  font-weight: bold;
-  color: #222;
+.menu__link:active {
+  transform: scale(1, 1);
 }
-.surname { font-weight: 500; }
-.profession {
-  font-size: 12rem;
-  font-weight: 500;
+.menu__icon {
+  width: 40px;
+  height: 40px;
 }
-                                          /*Profile*/
-.profile { margin-bottom: 30rem; }
-.profile__text {
-  color: #444;
-  text-align: justify;
+.menu-link__descr {
+  margin-right: 30px;
+  color: var(--dark-grey);
+  opacity: 0;
+  transition: opacity 250ms;
 }
-                                          /*Contacts*/
-.contacts {
-  margin: 0 auto 30rem;
-  padding: 28rem 0 20rem 0;
-  max-width: 210rem;
-  border-top: 2px solid #888;
-  border-bottom: 2px solid #888;
+.menu__link:hover + .menu-link__descr {
+  opacity: 1;
 }
-.contacts-list__item { margin-bottom: 10rem; }
-.contacts-list__icon {
-  vertical-align: middle;
-  margin-right: 12rem;
-  font-size: 17rem;
-  font-weight: 500;
-  color: #222;
+.menu__link:active + .menu-link__descr {
+  color: var(--orange);
 }
-.contacts-list__descr {
-  vertical-align: middle;
-  font-size: 13rem;
-  font-weight: 400;
-  color: #444;
-}
-                                          /*Pers Skills*/
-.pers-skills__list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 130rem;
-}
-.p-skills-list__item {
-  display: flex;
-  justify-content: space-between;
-}
-.p-skill {
-  font-weight: 500;
-  color: #444;
-}
-.dots { display: flex; }
-.dot {
-  font-size: 60rem;
-  line-height: 6rem;
-  font-weight: 500;
-  color: #222;
-}
-.dot--grey { color: #777; }
                                           /*Main*/
 main {
-  grid-area: main;
-  padding: 30rem 37rem 30rem;
-  background-color: #e4e6e7;
+  padding: 0 0 0 250px;
 }
-                                          /*Education*/
-.main-sections { margin-bottom: 22rem; }
-.icon {
-  margin-right: 10rem;
-  vertical-align: middle;
-  font-size: 20rem;
-  color: #555;
-}
-.e-list__item {
-  margin-bottom: 7rem;
-}
-.year {
-  margin-right: 3rem;
-}
-.courses {
-  padding: 7rem 0 0 55rem;
-  list-style-type: disc;
-}
-.courses__item { margin-bottom: 4rem; }
-                                          /*Pro Skills*/
-.pro-skills__graphs {
-  display: grid;
-  grid-template: repeat(3, 1fr)/repeat(2, 1fr);
-  grid-gap: 15rem 70rem;
-}
-.pro-skills__wrapper {
+                                          /*About section*/
+.about {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-bottom: 70px;
 }
-.pro-skills__graph {
-  display: flex;
-  width: 80rem;
-  height: 7rem;
+.about__text {
+  padding: 70px 70px 0 0;
 }
-.graph--black { background-color: #444; }
-.graph--grey { background-color: #999; }
-.html-graph__black { width: 90%; }
-.html-graph__grey { width: 10%; }
-.css-graph__black { width: 85%; }
-.css-graph__grey { width: 15%; }
-.js-graph__black { width: 70%; }
-.js-graph__grey { width: 30%; }
-.git-graph__black { width: 70%; }
-.git-graph__grey { width: 30%; }
-.react-graph__black { width: 40%; }
-.react-graph__grey { width: 60%; }
-.node-graph__black { width: 20%; }
-.node-graph__grey { width: 80%; }
-                                          /*Code Example*/
-.code-example__wrapper {
-  display: flex;
-  justify-content: space-around;
+.about__hi {
+  margin-bottom: 50px;
+  font-family: 'WindSong', cursive;
+  font-size: 120px;
+  color: var(--orange);
+  background-color: #fff;
 }
-.flex-item { display: flex; }
-.example-descr { margin-right: 3rem; }
-.example-ref { text-decoration: none; }
-                                          /*Languages*/
-.languages__list {
-  display: flex;
-  justify-content: space-between;
+.about__greetings {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 60px;
+  text-shadow: 1px 1px 2px var(--dark-grey);
+  background-color: #fff;
 }
-                                          /*Hobbies*/
-.hobbies-list {
-  display: flex;
-  justify-content: space-around;
+.about__profession {
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 32px;
+  background-color: #fff;
 }
-.hobby {
-  height: 47rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.about__profile {
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #fff;
 }
-.hobby__icon {
-  align-self: center;
-  font-size: 24rem;
-  font-weight: 600;
-  color: #333;
+.about__photo {
+  width: 550px;
+  height: 500px;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.8);
 }
-                                          /*Footer*/
-.footer {
-  grid-area: footer;
+                                          /*Education section*/
+.education__higher {
+  margin-bottom: 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 8rem 18rem;
-  background-color: #b3b3b3;
 }
-.ref {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+.education__blazon {
+  width: 160px;
 }
-.rsschool-logo {
-  width: 70rem;
-  height: 25rem;
-}
-.footer__year {
-  font-size: 14rem;
-  color: white;
-}
-.github-text {
-  margin-right: 18rem;
-  font-size: 13rem;
-  color: white;
-}
-.github-logo {
-  width: 30rem;
-  height: 30rem;
-  border-radius: 50%;
+.education__university {
+  font-size: 18px;
+  background-color: #fff;
 }

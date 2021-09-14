@@ -4,259 +4,87 @@
     <meta charset="utf-8">
     <meta name="description" content="Resume">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>rsschool-cv</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <title>My Portfolio</title>
+    <link rel="icon" href="assets/icons/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="body">
+    <div class="bg-wrapper"><div class="bg"></div></div>
     <h1 class="visually-hidden">Resume</h1>
     <div class="common-wrapper">
-      <aside class="aside">
-        <div class="aside-wrapper">
-          <section class="intro">
-            <h2 class="visually-hidden">Introduce</h2>
-            <figure class="figure">
-              <img class="avatar" src="img/ava.jpg" alt="Personal photo">
-              <figcaption class="name-surname">
-                <span class="name">Vadim</span>
-                <span class="surname">Bakunovich</span>
-              </figcaption>
-            </figure>
-            <p class="profession">TRAINEE FRONT-END DEVELOPER</p>
+      <nav class="menu">
+        <ul class="menu__list list">
+          <li class="menu__item">
+            <a class="menu__link" href="#about">
+              <img class="menu__icon" src="/assets/icons/home.svg" alt="home logo">
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu-link" href="#education">
+              <img class="menu__icon" src="/assets/icons/education.svg" alt="education logo">
+            </a>
+            <span class="menu-link__descr">EDUCATION</span>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#skills">
+              <img class="menu__icon" src="/assets/icons/skills.svg" alt="skills logo">
+            </a>
+            <span class="menu-link__descr">SKILLS</span>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#code">
+              <img class="menu__icon" src="/assets/icons/code.svg" alt="code logo">
+            </a>
+            <span class="menu-link__descr">CODE EXAMPLE</span>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#portfolio">
+              <img class="menu__icon" src="/assets/icons/portfolio.svg" alt="portfolio logo">
+            </a>
+            <span class="menu-link__descr">PORTFOLIO</span>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#contacts">
+              <img class="menu__icon" src="/assets/icons/contacts.svg" alt="contacts logo">
+            </a>
+            <span class="menu-link__descr">CONTACTS</span>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <main>
+          <section class="about" id="about">
+            <div class="about__text">
+              <p class="about__hi">Hi!</p>
+              <p class="about__greetings">I'm Vadzim Bakunovich</p>
+              <p class="about__profession">JUNIOR <span class="text--orange">FRONT-END</span> DEVELOPER</p>
+              <p class="about__profile">I will be glad to join a team of creative and energetic people 
+                who are ready to share their experience and help develop. I will gladly do my best to 
+                become a full-fledged member of such a team and bring value to the company.</p>
+            </div>
+            <img class="about__photo" src="/assets/personal_photo.JPG" alt="personal photo">
           </section>
-          <section class="profile">
-            <h2 class="profile__title title">PROFILE</h2>
-            <p class="profile__text regular-text">
-              I am an organised, efficient and hard working person, and am willing
-              to discover and accept new ideas which can be put into practice effectively.
-            </p>
+          <section class="education" id="education">
+            <h2 class="heading text--orange">EDUCATION</h2>
+            <div class="border"></div>
+            <h3 class="subheading">Higher education:</h3>
+            <div class="education__higher">
+              <img class="education__blazon" src="/assets/psu-logo.png" alt="blazon of Polotsk State University">
+              <p class="education__university"> - BSc(Hons) of Radio Engineering, Polotsk State University</p>
+            </div>
+            <h3 class="subheading">Courses (HTML, CSS, JS, React, Git):</h3>
           </section>
-          <section class="contacts">
-            <h2 class="contacts__title title">CONTACT ME</h2>
-            <ul class="contacts__list contacts-list list">
-              <li class="contacts-list__item">
-                <span class="contacts-list__icon">&#128222;</span>
-                <span class="contacts-list__descr">+375 29 711 02 67</span>
-              </li>
-              <li class="contacts-list__item">
-                <span class="contacts-list__icon">&#9993;</span>
-                <span class="contacts-list__descr">vadim.bakunovich@gmail.com</span>
-              </li>
-              <li class="contacts-list__item">
-                <span class="contacts-list__icon">&#x1f4cc;</span>
-                <span class="contacts-list__descr">2-123, 1 May St, Orsha, Belarus</span>
-              </li>
-            </ul>
-          </section>
-          <section class="pers-skills">
-            <h2 class="pers-skills__title title"> PERSONAL SKILLS</h2>
-            <ul class="pers-skills__list p-skills-list list">
-              <li class="p-skills-list__item">
-                <p class="p-skill bold-text">Team work</p>
-                <ul class="dots list">
-                  <li class="dot">&#8901;&#8901;&#8901;&#8901;</li>
-                  <li class="dot dot--grey">&#8901;</li>
-                </ul>
-              </li>
-              <li class="p-skills-list__item">
-                <p class="p-skill bold-text">Communication</p>
-                <ul class="dots list">
-                  <li class="dot">&#8901;&#8901;&#8901;&#8901;&#8901;</li>
-                </ul>
-              </li>
-              <li class="p-skills-list__item">
-                <p class="p-skill bold-text">Creative</p>
-                <ul class="dots list">
-                  <li class="dot">&#8901;&#8901;&#8901;&#8901;</li>
-                  <li class="dot dot--grey">&#8901;</li>
-                </ul>
-              </li>
-              <li class="p-skills-list__item">
-                <p class="p-skill bold-text">Time management</p>
-                <ul class="dots list">
-                  <li class="dot">&#8901;&#8901;&#8901;&#8901;</li>
-                  <li class="dot dot--grey">&#8901;</li>
-                </ul>
-              </li>
-              <li class="p-skills-list__item">
-                <p class="p-skill bold-text">Adaptability</p>
-                <ul class="dots list">
-                  <li class="dot">&#8901;&#8901;&#8901;&#8901;</li>
-                  <li class="dot dot--grey">&#8901;</li>
-                </ul>
-              </li>
-            </ul>
-          </section>
-        </div>
-      </aside>
-      <main>
-        <section class="education main-sections">
-          <h2 class="education__title title heading">
-            <span class="icon">&#127891;</span>
-            EDUCATION
-          </h2>
-          <ul class="education__list e-list list">
-            <li class="e-list__item regular-text">
-              <span class="year bold-text">1999</span>- high school diploma with honors
-            </li>
-            <li class="e-list__item regular-text">
-              <span class="year bold-text">2004</span>- BSc(Hons) of Radio Engineering, Polotsk State University
-            </li>
-            <li class="e-list__item regular-text">
-              <span class="year bold-text">2021</span>- Courses (HTML, CSS, JS, React, Git):
-              <ul class="courses">
-                <li class="courses__item">
-                  <a href="https://htmlacademy.ru/profile/id1671485">
-                    htmlacademy.ru
-                  </a>
-                </li>
-                <li class="courses__item">
-                  <a href="https://www.codecademy.com/profiles/VadimBakunovich">
-                    codecademy.com
-                  </a>
-                </li>
-                <li class="courses__item">
-                  <a href="https://www.codecademy.com/profiles/VadimBakunovich">
-                    freecodecamp.org
-                  </a>
-                </li>
-                <li class="courses__item">ru.code-basics.com (JS basics)</li>
-                <li class="courses__item">HTML, CSS, JS and React at SENLA (7 months)</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-        <section class="pro-skills main-sections">
-          <h2 class="pro-skills__title title heading">
-            <span class="icon">&#128202;</span>
-            PROFESSIONAL SKILLS
-          </h2>
-          <div class="pro-skills__graphs">
-            <div class="pro-skills__wrapper">
-              <p class="pro-skills__descr bold-text">HTML</p>
-              <div class="pro-skills__graph">
-                <div class="html-graph__black graph--black"></div>
-                <div class="html-graph__grey graph--grey"></div>
-              </div>
-            </div>
-            <div class="pro-skills__wrapper">
-              <p class="pro-skills__descr bold-text">Git</p>
-              <div class="pro-skills__graph">
-                <div class="git-graph__black graph--black"></div>
-                <div class="git-graph__grey graph--grey"></div>
-              </div>
-            </div>
-            <div class="pro-skills__wrapper">
-              <p class="pro-skills__descr bold-text">CSS</p>
-              <div class="pro-skills__graph">
-                <div class="css-graph__black graph--black"></div>
-                <div class="css-graph__grey graph--grey"></div>
-              </div>
-            </div>
-            <div class="pro-skills__wrapper">
-              <p class="pro-skills__descr bold-text">React</p>
-              <div class="pro-skills__graph">
-                <div class="react-graph__black graph--black"></div>
-                <div class="react-graph__grey graph--grey"></div>
-              </div>
-            </div>
-            <div class="pro-skills__wrapper">
-              <p class="pro-skills__descr bold-text">JS</p>
-              <div class="pro-skills__graph">
-                <div class="js-graph__black graph--black"></div>
-                <div class="js-graph__grey graph--grey"></div>
-              </div>
-            </div>
-            <div class="pro-skills__wrapper">
-              <p class="pro-skills__descr bold-text">NodeJS</p>
-              <div class="pro-skills__graph">
-                <div class="node-graph__black graph--black"></div>
-                <div class="node-graph__grey graph--grey"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="code-example main-sections">
-          <h2 class="code-example__title title heading">
-            <span class="icon">&#128187;</span>
-            CODE EXAMPLE
-          </h2>
-          <div class="code-example__wrapper">
-            <div class="flex-item">
-              <p class="example-descr bold-text">HTML & CSS</p>
-              <a class="example-ref regular-text"
-                href="https://vigorous-volhard-f84cf4.netlify.app/"
-                target="_blank">
-                - Training project
-              </a>
-            </div>
-            <div class="flex-item">
-              <p class="example-descr bold-text">React</p>
-              <a class="example-ref regular-text"
-                href="https://ecstatic-engelbart-e9335d.netlify.app/"
-                target="_blank">
-                - ToDo list
-              </a>
-            </div>
-          </div>
-        </section>
-        <section class="work-exp main-sections">
-          <h2 class="work-exp__title title heading">
-            <span class="icon">&#128188;</span>
-            WORK EXPERIENCE
-          </h2>
-          <p class="work-exp__descr regular-text">
-            <span class="year bold-text">2004 - 2021</span>- Automation Engineer at PJSC Gazprom (Belarus)
-          </p>
-        </section>
-        <section class="languages main-sections">
-          <h2 class="work-exp__title title heading">
-            <span class="icon">&#128172;</span>
-            LANGUAGES
-          </h2>
-          <ul class="languages__list list">
-            <li class="bold-text">Russian<span class="regular-text"> - native</span></li>
-            <li class="bold-text">Belorussian<span class="regular-text"> - moderate</span></li>
-            <li class="bold-text">English<span class="regular-text"> - A2</span></li>
-          </ul>
-        </section>
-        <section>
-          <h2 class="work-exp__title title heading">
-            <span class="icon">&#127775;</span>
-            HOBBIES AND INTERESTS
-          </h2>
-          <ul class="hobbies-list list">
-            <li class="hobby">
-              <span class="hobby__icon">&#128690;</span>
-              <p class="regular-text">Cycling</p>
-            </li>
-            <li class="hobby">
-              <span class="hobby__icon">&#127946;</span>
-              <p class="regular-text">Swimming</p>
-            </li>
-            <li class="hobby">
-              <span class="hobby__icon">&#9822;</span>
-              <p class="regular-text">Chess</p>
-            </li>
-            <li class="hobby">
-              <span class="hobby__icon">&#128214;</span>
-              <p class="regular-text">Reading</p>
-            </li>
-          </ul>
-        </section>
-      </main>
-      <footer class="footer">
-        <a class="ref" href="https://rs.school/js/" target="_blank">
-          <img class="rsschool-logo" src="./img/rs_school_js.svg" alt="RSSchool logo">
-        </a>
-        <p class="footer__year">- 2021 -</p>
-        <a class="ref" href="https://github.com/VadimBakunovich" target="_blank">
-          <p class="github-text">Follow me on GitHub</p>
-          <img class="github-logo" src="./img/GitHub-logo.png" alt="GitHub logo">
-        </a>
-      </footer>
+        </main>
+        <footer>
+
+        </footer>
+      </div>
+    </div>
     </div>
   </body>
 </html>
