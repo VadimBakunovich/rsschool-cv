@@ -12,56 +12,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
   </head>
   <body class="body">
     <div class="bg-wrapper"><div class="bg"></div></div>
     <h1 class="visually-hidden">Resume</h1>
     <div class="common-wrapper">
-      <nav class="menu">
-        <ul class="menu__list list">
-          <li class="menu__item">
-            <a class="menu__link" href="#about">
-              <img class="menu__icon" src="/assets/icons/menu/home.svg" alt="home logo">
-            </a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link menu-link" href="#education">
-              <img class="menu__icon" src="/assets/icons/menu/education.svg" alt="education logo">
-            </a>
-            <span class="menu-link__descr">EDUCATION</span>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#skills">
-              <img class="menu__icon" src="/assets/icons/menu/skills.svg" alt="skills logo">
-            </a>
-            <span class="menu-link__descr">SKILLS</span>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#code">
-              <img class="menu__icon" src="/assets/icons/menu/code.svg" alt="code logo">
-            </a>
-            <span class="menu-link__descr">CODE EXAMPLE</span>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#portfolio">
-              <img class="menu__icon" src="/assets/icons/menu/portfolio.svg" alt="portfolio logo">
-            </a>
-            <span class="menu-link__descr">PORTFOLIO</span>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#contacts">
-              <img class="menu__icon" src="/assets/icons/menu/contacts.svg" alt="contacts logo">
-            </a>
-            <span class="menu-link__descr">CONTACTS</span>
-          </li>
-        </ul>
-      </nav>
+      <header>
+        <nav class="menu">
+          <ul class="menu__list list">
+            <li class="menu__item">
+              <a class="menu__link" href="#about">
+                <img class="menu__icon" src="/assets/icons/menu/home.svg" alt="home logo">
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu-link" href="#education">
+                <img class="menu__icon" src="/assets/icons/menu/education.svg" alt="education logo">
+              </a>
+              <span class="menu-link__descr">EDUCATION</span>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#skills">
+                <img class="menu__icon" src="/assets/icons/menu/skills.svg" alt="skills logo">
+              </a>
+              <span class="menu-link__descr">SKILLS</span>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#code">
+                <img class="menu__icon" src="/assets/icons/menu/code.svg" alt="code logo">
+              </a>
+              <span class="menu-link__descr">CODE EXAMPLE</span>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#projects">
+                <img class="menu__icon" src="/assets/icons/menu/portfolio.svg" alt="portfolio logo">
+              </a>
+              <span class="menu-link__descr">PROJECTS</span>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#contacts">
+                <img class="menu__icon" src="/assets/icons/menu/contacts.svg" alt="contacts logo">
+              </a>
+              <span class="menu-link__descr">CONTACTS</span>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <div>
         <main>
           <section class="about" id="about">
+            <h2 class="visually-hidden">Greetings</h2>
             <div class="about__text">
               <p class="about__hi">Hi!</p>
-              <p class="about__greetings">I'm <span class="text--shadow">Vadzim Bakunovich</span></p>
+              <p class="about__greetings">I'm <span class="text--shadow">Vadim Bakunovich</span></p>
               <p class="about__profession">JUNIOR <span class="text--orange">FRONT-END</span> DEVELOPER</p>
               <p class="about__profile">I will be glad to join a team of creative and energetic people 
                 who are ready to share their experience and help develop. I will gladly do my best to 
@@ -156,12 +162,94 @@
                 <p>GIT</p>
               </li>
             </ul>
+            <h3 class="subheading add-skils">Additional skills:</h3>
+            <ul class="skills__add skills-list list">
+              <li class="skills__item add-item">
+                <img class="skills__icon" src="/assets/icons/skills/eng.svg" alt="british logo">
+                <p>English</p>
+                <p>A2</p>
+              </li>
+              <li class="skills__item add-item">
+                <a href="https://www.codewars.com/users/VadimBakunovich" target="_blank">
+                  <img class="skills__icon kyu-icon" src="/assets/icons/skills/4kyu.svg" alt="codewars 4kyu logo">
+                </a>
+                <p>Codewars</p>
+                <p>JS level</p>
+              </li>
+            </ul>
+          </section>
+          <section class="code" id="code">
+            <h2 class="heading text--orange">CODE EXAMPLE</h2>
+            <h3 class="subheading">The Codewars kata
+              <a class="kata-link" href="https://www.codewars.com/kata/596f72bbe7cd7296d1000029" target="_blank">
+                "Array Deep Count"
+              </a>
+              (solution):
+            </h3>
+            <pre><code class="language-js">const deepCount = a => a.reduce((acc, i) => acc + (Array.isArray(i) ? deepCount(i) : 0), a.length);</code></pre>
+          </section>
+          <section class="projects" id="projects">
+            <h2 class="heading text--orange">PROJECTS</h2>
+            <ul class="projects__list project-list list">
+              <li class="project-list__item">
+                <figure>
+                  <a href="https://vigorous-volhard-f84cf4.netlify.app/" target="_blank">
+                    <img class="projects__thumbnail" src="/assets/save_life.JPG" alt="thumbnail">
+                  </a>
+                  <figcaption class="project__name">"Save life"</figcaption>
+                </figure>
+                <p class="project__descr">A study project to create a website for the rescue of homeless animals</p>
+                <div class="project__tech">
+                  <img class="tech-logo" src="/assets/icons/projects/html.svg" alt="html5 icon">
+                  <img class="tech-logo" src="/assets/icons/projects/css.svg" alt="css3 icon">
+                </div>
+              </li>
+              <li class="project-list__item">
+                <figure>
+                  <a href="https://rolling-scopes-school.github.io/vadimbakunovich-JSFEPRESCHOOL/museum/" target="_blank">
+                    <img class="projects__thumbnail" src="/assets/museum.JPG" alt="thumbnail">
+                  </a>
+                  <figcaption class="project__name">"Louvre"</figcaption>
+                </figure>
+                <p class="project__descr">A study project to create a Louvre website</p>
+                <div class="project__tech">
+                  <img class="tech-logo" src="/assets/icons/projects/html.svg" alt="html5 icon">
+                  <img class="tech-logo" src="/assets/icons/projects/css.svg" alt="css3 icon">
+                </div>
+              </li>
+              <li class="project-list__item">
+                <figure>
+                  <a href="https://infallible-murdock-d8113f.netlify.app/" target="_blank">
+                    <img class="projects__thumbnail" src="/assets/film_gallery.JPG" alt="thumbnail">
+                  </a>
+                  <figcaption class="project__name">"Film gallery"</figcaption>
+                </figure>
+                <p class="project__descr">A study project to create a film gallery website</p>
+                <div class="project__tech">
+                  <img class="tech-logo" src="/assets/icons/projects/html.svg" alt="html5 icon">
+                  <img class="tech-logo" src="/assets/icons/projects/css.svg" alt="css3 icon">
+                  <img class="tech-logo js-logo" src="/assets/icons/projects/js.svg" alt="js icon">
+                </div>
+              </li>
+              <li class="project-list__item">
+                <figure>
+                  <a href="https://ecstatic-engelbart-e9335d.netlify.app/" target="_blank">
+                    <img class="projects__thumbnail" src="/assets/todo.JPG" alt="thumbnail">
+                  </a>
+                  <figcaption class="project__name">"To-Do list"</figcaption>
+                </figure>
+                <p class="project__descr">A study project to create a To-Do list website</p>
+                <div class="project__tech">
+                  <img class="tech-logo" src="/assets/icons/projects/css.svg" alt="css3 icon">
+                  <img class="tech-logo" src="/assets/icons/projects/react.png" alt="react icon">
+                </div>
+              </li>
+            </ul>
           </section>
         </main>
         <footer>
         </footer>
       </div>
-    </div>
     </div>
   </body>
 </html>
