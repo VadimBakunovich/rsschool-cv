@@ -14,7 +14,6 @@ html {
   --light-grey: #f0f0f6;
   --grey: #ebe9e5;
   --dark-grey: #3e3e3e;
-  --orange: #ffb400;
   --orange: #ffa500;
 }
 .body {
@@ -47,6 +46,11 @@ html {
 a { font-size: 0; }
 .text--orange { color: var(--orange); }
 .text--shadow { text-shadow: 1px 1px 2px var(--dark-grey); }
+.icon-link { 
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.8);
+  transition: filter 300ms;
+}
+.icon-link:hover { filter: brightness(1.2); }
 section {
   width: fit-content;
   padding: 40px 0;
@@ -203,8 +207,20 @@ main { padding: 0 0 0 320px; }
   width: 277px;
   margin-bottom: 0;
 }
-.add-item { height: 110px; }
-.kyu-icon { width: 90px; }
+.add-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.add-icon { margin-bottom: 15px; }
+.codewars {
+  filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.8));
+  transition: filter 300ms;
+}
+.codewars:hover {
+  filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.8)) brightness(1.2);
+}
+.first-p { margin-bottom: 4px; }
                                           /*Code section*/
 .code { border-top: 3px solid var(--grey); }
 .kata-link {
@@ -238,3 +254,38 @@ main { padding: 0 0 0 320px; }
 .project__descr { margin-bottom: 15px; }
 .tech-logo { height: 40px; }
 .js-logo { margin-left: 6px; }
+                                          /*Contacts section*/
+.contacts { border-top: 3px solid var(--grey); }
+.contacts__list { display: flex; }
+.contact-list__item {
+  display: flex;
+  align-items: center;
+}
+.contacts__icon {
+  width: 30px;
+  margin: 0 15px 0 50px;
+  filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.8));
+  transition: filter 300ms ;
+}
+.contacts__icon:hover {
+  filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.8)) brightness(1.2);
+}
+                                          /*Footer*/
+.footer {
+  padding: 30px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 3px solid var(--grey);
+}
+.footer__logo { height: 40px; }
+.footer__link {
+  display: flex;
+  align-items: center;
+  color: var(--dark-grey);
+  text-decoration: none;
+}
+.footer__text {
+  margin-right: 10px;
+  font-size: 18px;
+}

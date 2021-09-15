@@ -4,17 +4,15 @@
     <meta charset="utf-8">
     <meta name="description" content="Resume">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
+    <title>Resume</title>
     <link rel="icon" href="assets/icons/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="body">
     <div class="bg-wrapper"><div class="bg"></div></div>
@@ -87,19 +85,19 @@
             <ul class="education__courses list">
               <li class="education__course">
                 <a class="course__link" href="https://htmlacademy.ru/profile/id1671485" target="_blank">
-                  <img class="course__logo" src="/assets/icons/courses/htmlacademy.jpg" alt="html academy logo">
+                  <img class="course__logo icon-link" src="/assets/icons/courses/htmlacademy.jpg" alt="html academy logo">
                 </a>
                 <p class="course__descr">htmlacademy.ru</p>
               </li>
               <li class="education__course">
                 <a href="https://www.codecademy.com/profiles/VadimBakunovich" target="_blank">
-                  <img class="course__logo" src="/assets/icons/courses/codecademy.png" alt="codecademy logo">
+                  <img class="course__logo icon-link" src="/assets/icons/courses/codecademy.png" alt="codecademy logo">
                 </a>
                 <p class="course__descr">codecademy.com</p>
               </li>
               <li class="education__course">
                 <a href="https://www.freecodecamp.org/vadim_bakunovich" target="_blank">
-                  <img class="course__logo" src="/assets/icons/courses/freecodecamp.png" alt="freecodecamp logo">
+                  <img class="course__logo icon-link" src="/assets/icons/courses/freecodecamp.png" alt="freecodecamp logo">
                 </a>
                 <p class="course__descr">freecodecamp.org</p>
               </li>
@@ -164,17 +162,17 @@
             </ul>
             <h3 class="subheading add-skils">Additional skills:</h3>
             <ul class="skills__add skills-list list">
-              <li class="skills__item add-item">
-                <img class="skills__icon" src="/assets/icons/skills/eng.svg" alt="british logo">
-                <p>English</p>
+              <li class="add-item">
+                <img class="skills__icon add-icon" src="/assets/icons/skills/eng.svg" alt="british logo">
+                <p class="first-p">English</p>
                 <p>A2</p>
               </li>
               <li class="skills__item add-item">
                 <a href="https://www.codewars.com/users/VadimBakunovich" target="_blank">
-                  <img class="skills__icon kyu-icon" src="/assets/icons/skills/4kyu.svg" alt="codewars 4kyu logo">
+                  <img class="skills__icon add-icon codewars" src="/assets/icons/skills/codewars.svg" alt="codewars 4kyu logo">
                 </a>
-                <p>Codewars</p>
-                <p>JS level</p>
+                <p class="first-p">Codewars</p>
+                <p>rank: 4kyu</p>
               </li>
             </ul>
           </section>
@@ -198,7 +196,7 @@
                   </a>
                   <figcaption class="project__name">"Save life"</figcaption>
                 </figure>
-                <p class="project__descr">A study project to create a website for the rescue of homeless animals</p>
+                <p class="project__descr">A study project for creating a website for the rescue of homeless animals</p>
                 <div class="project__tech">
                   <img class="tech-logo" src="/assets/icons/projects/html.svg" alt="html5 icon">
                   <img class="tech-logo" src="/assets/icons/projects/css.svg" alt="css3 icon">
@@ -211,7 +209,7 @@
                   </a>
                   <figcaption class="project__name">"Louvre"</figcaption>
                 </figure>
-                <p class="project__descr">A study project to create a Louvre website</p>
+                <p class="project__descr">A study project for creating a Louvre website</p>
                 <div class="project__tech">
                   <img class="tech-logo" src="/assets/icons/projects/html.svg" alt="html5 icon">
                   <img class="tech-logo" src="/assets/icons/projects/css.svg" alt="css3 icon">
@@ -224,7 +222,7 @@
                   </a>
                   <figcaption class="project__name">"Film gallery"</figcaption>
                 </figure>
-                <p class="project__descr">A study project to create a film gallery website</p>
+                <p class="project__descr">A study project for creating a film gallery website</p>
                 <div class="project__tech">
                   <img class="tech-logo" src="/assets/icons/projects/html.svg" alt="html5 icon">
                   <img class="tech-logo" src="/assets/icons/projects/css.svg" alt="css3 icon">
@@ -238,7 +236,7 @@
                   </a>
                   <figcaption class="project__name">"To-Do list"</figcaption>
                 </figure>
-                <p class="project__descr">A study project to create a To-Do list website</p>
+                <p class="project__descr">A study project for creating a To-Do list application</p>
                 <div class="project__tech">
                   <img class="tech-logo" src="/assets/icons/projects/css.svg" alt="css3 icon">
                   <img class="tech-logo" src="/assets/icons/projects/react.png" alt="react icon">
@@ -246,10 +244,36 @@
               </li>
             </ul>
           </section>
+          <section class="contacts" id="contacts">
+            <h2 class="heading text--orange">CONTACTS</h2>
+            <ul class="contacts__list list">
+              <li class="contact-list__item">
+                <a href="mailto:vadim.bakunovich@gmail.com">
+                  <img class="contacts__icon" src="/assets/icons/contacts/gmail.svg" alt="gmail icon">
+                </a>
+                <p>vadim.bakunovich@gmail.com</p>
+              </li>
+              <li>
+                <a href="https://t.me/VadzimBA" target="_blank">
+                  <img class="contacts__icon" src="/assets/icons/contacts/telegram.svg" alt="telegram icon">
+                </a>
+              </li>
+            </ul>
+          </section>
         </main>
-        <footer>
+        <footer class="footer">
+          <a class="ref" href="https://rs.school/js/" target="_blank">
+            <img class="footer__logo" src="/assets/icons/rs_school_js.svg" alt="RS School logo">
+          </a>
+          <p>- 2021 -</p>
+          <a class="footer__link" href="https://github.com/VadimBakunovich" target="_blank">
+            <p class="footer__text">Follow me on GitHub</p>
+            <img class="footer__logo" src="/assets/icons/github.svg" alt="GitHub logo">
+          </a>
         </footer>
       </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
   </body>
 </html>
