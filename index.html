@@ -13,100 +13,127 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaQ.css">
   </head>
   <body class="body">
-    <div class="bg-wrapper"><div class="bg"></div></div>
+    <div class="bg"></div>
     <h1 class="visually-hidden">Resume</h1>
+    <div class="burger-wrapper">
+      <nav class="burger">
+        <div class="burger__icon"><span></span></div>
+          <ul class="burger__list">
+            <li class="burger__item">
+              <a class="burger__link" href="#about">ABOUT</a>
+            </li>
+            <li class="burger__item">
+              <a class="burger__link" href="#education">EDUCATION</a>
+            </li>
+            <li class="burger__item">
+              <a class="burger__link" href="#skills">SKILLS</a>
+            </li>
+            <li class="burger__item">
+              <a class="burger__link" href="#code">CODE EXAMPLE</a>
+            </li>
+            <li class="burger__item">
+              <a class="burger__link" href="#projects">PROJECTS</a>
+            </li>
+            <li class="burger__item border--none">
+              <a class="burger__link" href="#contacts">CONTACTS</a>
+            </li>
+          </ul>
+      </nav>
+    </div>
     <div class="common-wrapper">
-      <header>
+      <header class="header">
         <nav class="menu">
-          <ul class="menu__list list">
+          <ul class="menu__list">
             <li class="menu__item">
               <a class="menu__link" href="#about">
-                <img class="menu__icon" src="/assets/icons/menu/home.svg" alt="home logo">
+                <img class="menu__icon" src="assets/icons/menu/home.svg" alt="home logo">
               </a>
             </li>
             <li class="menu__item">
               <a class="menu__link menu-link" href="#education">
-                <img class="menu__icon" src="/assets/icons/menu/education.svg" alt="education logo">
+                <img class="menu__icon" src="assets/icons/menu/education.svg" alt="education logo">
               </a>
               <span class="menu-link__descr">EDUCATION</span>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="#skills">
-                <img class="menu__icon" src="/assets/icons/menu/skills.svg" alt="skills logo">
+                <img class="menu__icon" src="assets/icons/menu/skills.svg" alt="skills logo">
               </a>
               <span class="menu-link__descr">SKILLS</span>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="#code">
-                <img class="menu__icon" src="/assets/icons/menu/code.svg" alt="code logo">
+                <img class="menu__icon" src="assets/icons/menu/code.svg" alt="code logo">
               </a>
               <span class="menu-link__descr">CODE EXAMPLE</span>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="#projects">
-                <img class="menu__icon" src="/assets/icons/menu/portfolio.svg" alt="portfolio logo">
+                <img class="menu__icon" src="assets/icons/menu/portfolio.svg" alt="portfolio logo">
               </a>
               <span class="menu-link__descr">PROJECTS</span>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="#contacts">
-                <img class="menu__icon" src="/assets/icons/menu/contacts.svg" alt="contacts logo">
+                <img class="menu__icon" src="assets/icons/menu/contacts.svg" alt="contacts logo">
               </a>
               <span class="menu-link__descr">CONTACTS</span>
             </li>
           </ul>
         </nav>
       </header>
-      <div>
-        <main>
+      <main class="main">
           <section class="about" id="about">
             <h2 class="visually-hidden">Greetings</h2>
-            <div class="about__text">
-              <p class="about__hi">Hi!</p>
-              <p class="about__greetings">I'm <span class="text--shadow">Vadim Bakunovich</span></p>
-              <p class="about__profession">JUNIOR <span class="text--orange">FRONT-END</span> DEVELOPER</p>
-              <p class="about__profile">I will be glad to join a team of creative and energetic people 
-                who are ready to share their experience and help develop. I will gladly do my best to 
-                become a full-fledged member of such a team and bring value to the company.</p>
+            <div class="about__wrapper">
+              <div class="about__text">
+                <p class="about__hi">Hi!</p>
+                <p class="about__greetings">I'm<br><span class="text--shadow">Vadim Bakunovich</span></p>
+                <p class="about__profession">JUNIOR <span class="text--orange">FRONT-END</span> DEVELOPER</p>
+              </div>
+              <img class="about__photo" src="assets/personal_photo.JPG" alt="personal photo">
             </div>
-            <img class="about__photo" src="/assets/personal_photo.JPG" alt="personal photo">
+            <p class="about__profile">I will be glad to join a team of creative and energetic people who are ready
+              to share their experience and help develop, and I will do my best to become a full member of such
+              a team and benefit the company.</p>
           </section>
           <section class="education" id="education">
             <h2 class="heading text--orange">EDUCATION</h2>
             <div class="border"></div>
             <h3 class="subheading">Higher education:</h3>
             <div class="education__higher">
-              <img class="education__blazon" src="/assets/icons/courses/psu-logo.png" alt="blazon of Polotsk State University">
+              <img class="education__blazon" src="assets/icons/courses/psu-logo.png" alt="blazon of Polotsk State University">
               <p class="education__university"> BSc(Hons) of Radio Engineering, Polotsk State University</p>
             </div>
             <h3 class="subheading">Courses (HTML, CSS, JS, React, Git):</h3>
-            <ul class="education__courses list">
+            <ul class="education__courses">
               <li class="education__course">
-                <a class="course__link" href="https://htmlacademy.ru/profile/id1671485" target="_blank">
-                  <img class="course__logo icon-link" src="/assets/icons/courses/htmlacademy.jpg" alt="html academy logo">
+                <a class="a" href="https://htmlacademy.ru/profile/id1671485" target="_blank">
+                  <img class="course__logo icon-link" src="assets/icons/courses/htmlacademy.jpg" alt="html academy logo">
                 </a>
                 <p class="course__descr">htmlacademy.ru</p>
               </li>
               <li class="education__course">
-                <a href="https://www.codecademy.com/profiles/VadimBakunovich" target="_blank">
-                  <img class="course__logo icon-link" src="/assets/icons/courses/codecademy.png" alt="codecademy logo">
+                <a class="a" href="https://www.codecademy.com/profiles/VadimBakunovich" target="_blank">
+                  <img class="course__logo icon-link" src="assets/icons/courses/codecademy.png" alt="codecademy logo">
                 </a>
                 <p class="course__descr">codecademy.com</p>
               </li>
               <li class="education__course">
-                <a href="https://www.freecodecamp.org/vadim_bakunovich" target="_blank">
-                  <img class="course__logo icon-link" src="/assets/icons/courses/freecodecamp.png" alt="freecodecamp logo">
+                <a class="a" href="https://www.freecodecamp.org/vadim_bakunovich" target="_blank">
+                  <img class="course__logo icon-link" src="assets/icons/courses/freecodecamp.png" alt="freecodecamp logo">
                 </a>
                 <p class="course__descr">freecodecamp.org</p>
               </li>
               <li class="education__course">
-                <img class="course__logo" src="/assets/icons/courses/senla.jpg" alt="senla logo">
+                <img class="course__logo" src="assets/icons/courses/senla.jpg" alt="senla logo">
                 <p class="course__descr">HTML, CSS, JS and React at SENLA (7 months)</p>
               </li>
               <li class="education__course">
-                <img class="course__logo" src="/assets/icons/courses/rsschool.jpg" alt="rs school logo">
+                <img class="course__logo" src="assets/icons/courses/rsschool.jpg" alt="rs school logo">
                 <p class="course__descr">Front-end Pre-School at RS School (2 months)</p>
               </li>
             </ul>
@@ -115,61 +142,61 @@
             <h2 class="heading text--orange">SKILLS</h2>
             <div class="border"></div>
             <h3 class="subheading">My strengths:</h3>
-              <ul class="skills__soft skills-list list">
+              <ul class="skills__soft skills-list">
                 <li class="skills__item">
-                  <img class="skills__icon" src="/assets/icons/skills/work-ethic.png" alt="work ethic skill logo">
+                  <img class="skills__icon" src="assets/icons/skills/work-ethic.png" alt="work ethic skill logo">
                   <p>work ethic</p>
                 </li>
                 <li class="skills__item">
-                  <img class="skills__icon" src="/assets/icons/skills/communication.svg" alt="communication skill logo">
+                  <img class="skills__icon" src="assets/icons/skills/communication.svg" alt="communication skill logo">
                   <p>communication</p>
                 </li>
                 <li class="skills__item">
-                  <img class="skills__icon" src="/assets/icons/skills/teamwork.svg" alt="team work skill logo">
+                  <img class="skills__icon" src="assets/icons/skills/teamwork.svg" alt="team work skill logo">
                   <p>team work</p>
                 </li>
                 <li class="skills__item">
-                  <img class="skills__icon" src="/assets/icons/skills/adaptability.svg" alt="adaptability skill logo">
+                  <img class="skills__icon" src="assets/icons/skills/adaptability.svg" alt="adaptability skill logo">
                   <p>adaptability</p>
                 </li>
                 <li class="skills__item">
-                  <img class="skills__icon" src="/assets/icons/skills/self-growth.svg" alt="self-development skill logo">
+                  <img class="skills__icon" src="assets/icons/skills/self-growth.svg" alt="self-development skill logo">
                   <p>self-development</p>
                 </li>
               </ul>
             <h3 class="subheading">Using now:</h3>
-            <ul class="skills__hard skills-list list">
+            <ul class="skills__hard skills-list">
               <li class="skills__item">
-                <img class="skills__icon" src="/assets/icons/skills/html5.svg" alt="html5 logo">
+                <img class="skills__icon" src="assets/icons/skills/html5.svg" alt="html5 logo">
                 <p>HTML5</p>
               </li>
               <li class="skills__item">
-                <img class="skills__icon" src="/assets/icons/skills/css3.svg" alt="css3 logo">
+                <img class="skills__icon" src="assets/icons/skills/css3.svg" alt="css3 logo">
                 <p>CSS3</p>
               </li>
               <li class="skills__item">
-                <img class="skills__icon" src="/assets/icons/skills/js.svg" alt="javascript logo">
+                <img class="skills__icon" src="assets/icons/skills/js.svg" alt="javascript logo">
                 <p>JavaScript</p>
               </li>
               <li class="skills__item">
-                <img class="skills__icon" src="/assets/icons/skills/react.svg" alt="react logo">
+                <img class="skills__icon" src="assets/icons/skills/react.svg" alt="react logo">
                 <p>REACT</p>
               </li>
               <li class="skills__item">
-                <img class="skills__icon" src="/assets/icons/skills/git.svg" alt="git logo">
+                <img class="skills__icon" src="assets/icons/skills/git.svg" alt="git logo">
                 <p>GIT</p>
               </li>
             </ul>
             <h3 class="subheading add-skils">Additional skills:</h3>
-            <ul class="skills__add skills-list list">
+            <ul class="skills__add skills-list">
               <li class="add-item">
-                <img class="skills__icon add-icon" src="/assets/icons/skills/eng.svg" alt="british logo">
+                <img class="skills__icon add-icon" src="assets/icons/skills/eng.svg" alt="british logo">
                 <p class="first-p">English</p>
                 <p>A2</p>
               </li>
-              <li class="skills__item add-item">
-                <a href="https://www.codewars.com/users/VadimBakunovich" target="_blank">
-                  <img class="skills__icon add-icon codewars" src="/assets/icons/skills/codewars.svg" alt="codewars 4kyu logo">
+              <li class="add-item add-item--margin">
+                <a class="a" href="https://www.codewars.com/users/VadimBakunovich" target="_blank">
+                  <img class="skills__icon add-icon codewars" src="assets/icons/skills/codewars.svg" alt="codewars 4kyu logo">
                 </a>
                 <p class="first-p">Codewars</p>
                 <p>rank: 4kyu</p>
@@ -184,96 +211,100 @@
               </a>
               (solution):
             </h3>
-            <pre><code class="language-js">const deepCount = a => a.reduce((acc, i) => acc + (Array.isArray(i) ? deepCount(i) : 0), a.length);</code></pre>
+            <pre><code class="language-js">const dC = a => {
+
+  return a.reduce((c, i) => c + (Array.isArray(i) ? dC(i) : 0), a.length)
+
+}</code></pre>
           </section>
           <section class="projects" id="projects">
             <h2 class="heading text--orange">PROJECTS</h2>
-            <ul class="projects__list project-list list">
+            <ul class="projects__list project-list">
               <li class="project-list__item">
                 <figure>
                   <a href="https://vigorous-volhard-f84cf4.netlify.app/" target="_blank">
-                    <img class="projects__thumbnail" src="/assets/save_life.JPG" alt="thumbnail">
+                    <img class="projects__thumbnail" src="assets/save_life.JPG" alt="thumbnail">
                   </a>
                   <figcaption class="project__name">"Save life"</figcaption>
                 </figure>
                 <p class="project__descr">A study project for creating a website for the rescue of homeless animals</p>
                 <div class="project__tech">
-                  <img class="tech-logo" src="/assets/icons/projects/html.svg" alt="html5 icon">
-                  <img class="tech-logo" src="/assets/icons/projects/css.svg" alt="css3 icon">
+                  <img class="tech-logo" src="assets/icons/projects/html.svg" alt="html5 icon">
+                  <img class="tech-logo" src="assets/icons/projects/css.svg" alt="css3 icon">
                 </div>
               </li>
               <li class="project-list__item">
                 <figure>
                   <a href="https://rolling-scopes-school.github.io/vadimbakunovich-JSFEPRESCHOOL/museum/" target="_blank">
-                    <img class="projects__thumbnail" src="/assets/museum.JPG" alt="thumbnail">
+                    <img class="projects__thumbnail" src="assets/museum.JPG" alt="thumbnail">
                   </a>
                   <figcaption class="project__name">"Louvre"</figcaption>
                 </figure>
                 <p class="project__descr">A study project for creating a Louvre website</p>
                 <div class="project__tech">
-                  <img class="tech-logo" src="/assets/icons/projects/html.svg" alt="html5 icon">
-                  <img class="tech-logo" src="/assets/icons/projects/css.svg" alt="css3 icon">
+                  <img class="tech-logo" src="assets/icons/projects/html.svg" alt="html5 icon">
+                  <img class="tech-logo" src="assets/icons/projects/css.svg" alt="css3 icon">
                 </div>
               </li>
               <li class="project-list__item">
                 <figure>
                   <a href="https://infallible-murdock-d8113f.netlify.app/" target="_blank">
-                    <img class="projects__thumbnail" src="/assets/film_gallery.JPG" alt="thumbnail">
+                    <img class="projects__thumbnail" src="assets/film_gallery.JPG" alt="thumbnail">
                   </a>
                   <figcaption class="project__name">"Film gallery"</figcaption>
                 </figure>
                 <p class="project__descr">A study project for creating a film gallery website</p>
                 <div class="project__tech">
-                  <img class="tech-logo" src="/assets/icons/projects/html.svg" alt="html5 icon">
-                  <img class="tech-logo" src="/assets/icons/projects/css.svg" alt="css3 icon">
-                  <img class="tech-logo js-logo" src="/assets/icons/projects/js.svg" alt="js icon">
+                  <img class="tech-logo" src="assets/icons/projects/html.svg" alt="html5 icon">
+                  <img class="tech-logo" src="assets/icons/projects/css.svg" alt="css3 icon">
+                  <img class="tech-logo js-logo" src="assets/icons/projects/js.svg" alt="js icon">
                 </div>
               </li>
               <li class="project-list__item">
                 <figure>
                   <a href="https://ecstatic-engelbart-e9335d.netlify.app/" target="_blank">
-                    <img class="projects__thumbnail" src="/assets/todo.JPG" alt="thumbnail">
+                    <img class="projects__thumbnail" src="assets/todo.JPG" alt="thumbnail">
                   </a>
                   <figcaption class="project__name">"To-Do list"</figcaption>
                 </figure>
                 <p class="project__descr">A study project for creating a To-Do list application</p>
                 <div class="project__tech">
-                  <img class="tech-logo" src="/assets/icons/projects/css.svg" alt="css3 icon">
-                  <img class="tech-logo" src="/assets/icons/projects/react.png" alt="react icon">
+                  <img class="tech-logo" src="assets/icons/projects/css.svg" alt="css3 icon">
+                  <img class="tech-logo" src="assets/icons/projects/react.png" alt="react icon">
                 </div>
               </li>
             </ul>
           </section>
           <section class="contacts" id="contacts">
             <h2 class="heading text--orange">CONTACTS</h2>
-            <ul class="contacts__list list">
+            <ul class="contacts__list">
               <li class="contact-list__item">
                 <a href="mailto:vadim.bakunovich@gmail.com">
-                  <img class="contacts__icon" src="/assets/icons/contacts/gmail.svg" alt="gmail icon">
+                  <img class="contacts__icon" src="assets/icons/contacts/gmail.svg" alt="gmail icon">
                 </a>
                 <p>vadim.bakunovich@gmail.com</p>
               </li>
               <li>
                 <a href="https://t.me/VadzimBA" target="_blank">
-                  <img class="contacts__icon" src="/assets/icons/contacts/telegram.svg" alt="telegram icon">
+                  <img class="contacts__icon" src="assets/icons/contacts/telegram.svg" alt="telegram icon">
                 </a>
               </li>
             </ul>
           </section>
-        </main>
-        <footer class="footer">
+      </main>
+      <footer class="footer">
           <a class="ref" href="https://rs.school/js/" target="_blank">
-            <img class="footer__logo" src="/assets/icons/rs_school_js.svg" alt="RS School logo">
+            <img class="footer__logo" src="assets/icons/rs_school_js.svg" alt="RS School logo">
           </a>
           <p>- 2021 -</p>
           <a class="footer__link" href="https://github.com/VadimBakunovich" target="_blank">
             <p class="footer__text">Follow me on GitHub</p>
-            <img class="footer__logo" src="/assets/icons/github.svg" alt="GitHub logo">
+            <img class="footer__logo" src="assets/icons/github.svg" alt="GitHub logo">
           </a>
-        </footer>
-      </div>
+      </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="script.js"></script>
   </body>
 </html>
