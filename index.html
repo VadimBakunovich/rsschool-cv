@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -86,7 +86,7 @@
         </nav>
       </header>
       <main class="main">
-          <section class="about" id="about">
+        <section class="about" id="about">
             <h2 class="visually-hidden">Greetings</h2>
             <div class="about__wrapper">
               <div class="about__text">
@@ -99,10 +99,9 @@
             <p class="about__profile">I will be glad to join a team of creative and energetic people who are ready
               to share their experience and help develop, and I will do my best to become a full member of such
               a team and benefit the company.</p>
-          </section>
-          <section class="education" id="education">
+        </section>
+        <section class="education" id="education">
             <h2 class="heading text--orange">EDUCATION</h2>
-            <div class="border"></div>
             <h3 class="subheading">Higher education:</h3>
             <div class="education__higher">
               <img class="education__blazon" src="assets/icons/courses/psu-logo.png" alt="blazon of Polotsk State University">
@@ -137,11 +136,12 @@
                 <p class="course__descr">Front-end Pre-School at RS School (2 months)</p>
               </li>
             </ul>
-          </section>
-          <section class="skills" id="skills">
-            <h2 class="heading text--orange">SKILLS</h2>
-            <div class="border"></div>
-            <h3 class="subheading">My strengths:</h3>
+        </section>
+        <section class="skills" id="skills">
+          <h2 class="heading text--orange">SKILLS</h2>
+          <div class="skills__wrapper">
+            <div class="soft">
+              <h3 class="subheading text--center">My strengths:</h3>
               <ul class="skills__soft skills-list">
                 <li class="skills__item">
                   <img class="skills__icon" src="assets/icons/skills/work-ethic.png" alt="work ethic skill logo">
@@ -161,11 +161,13 @@
                 </li>
                 <li class="skills__item">
                   <img class="skills__icon" src="assets/icons/skills/self-growth.svg" alt="self-development skill logo">
-                  <p>self-development</p>
+                  <p>self-growth</p>
                 </li>
               </ul>
-            <h3 class="subheading">Using now:</h3>
-            <ul class="skills__hard skills-list">
+            </div>
+            <div>
+              <h3 class="subheading text--center">Using now:</h3>
+              <ul class="skills__hard skills-list">
               <li class="skills__item">
                 <img class="skills__icon" src="assets/icons/skills/html5.svg" alt="html5 logo">
                 <p>HTML5</p>
@@ -186,24 +188,26 @@
                 <img class="skills__icon" src="assets/icons/skills/git.svg" alt="git logo">
                 <p>GIT</p>
               </li>
-            </ul>
+              </ul>
+            </div>
+          </div>
             <h3 class="subheading add-skils">Additional skills:</h3>
             <ul class="skills__add skills-list">
-              <li class="add-item">
+              <li class="skills__item">
                 <img class="skills__icon add-icon" src="assets/icons/skills/eng.svg" alt="british logo">
                 <p class="first-p">English</p>
                 <p>A2</p>
               </li>
-              <li class="add-item add-item--margin">
+              <li class="skills__item">
                 <a class="a" href="https://www.codewars.com/users/VadimBakunovich" target="_blank">
                   <img class="skills__icon add-icon codewars" src="assets/icons/skills/codewars.svg" alt="codewars 4kyu logo">
                 </a>
                 <p class="first-p">Codewars</p>
-                <p>rank: 4kyu</p>
+                <p>4kyu</p>
               </li>
             </ul>
-          </section>
-          <section class="code" id="code">
+        </section>
+        <section class="code" id="code">
             <h2 class="heading text--orange">CODE EXAMPLE</h2>
             <h3 class="subheading">The Codewars kata
               <a class="kata-link" href="https://www.codewars.com/kata/596f72bbe7cd7296d1000029" target="_blank">
@@ -211,13 +215,9 @@
               </a>
               (solution):
             </h3>
-            <pre><code class="language-js">const dC = a => {
-
-  return a.reduce((c, i) => c + (Array.isArray(i) ? dC(i) : 0), a.length)
-
-}</code></pre>
-          </section>
-          <section class="projects" id="projects">
+            <pre><code class="language-js">const dC = a => a.reduce((c, i) => c + (Array.isArray(i) ? dC(i) : 0), a.length)</code></pre>
+        </section>
+        <section class="projects" id="projects">
             <h2 class="heading text--orange">PROJECTS</h2>
             <ul class="projects__list project-list">
               <li class="project-list__item">
@@ -274,23 +274,29 @@
                 </div>
               </li>
             </ul>
-          </section>
-          <section class="contacts" id="contacts">
+        </section>
+        <section class="contacts" id="contacts">
             <h2 class="heading text--orange">CONTACTS</h2>
             <ul class="contacts__list">
-              <li class="contact-list__item">
-                <a href="mailto:vadim.bakunovich@gmail.com">
-                  <img class="contacts__icon" src="assets/icons/contacts/gmail.svg" alt="gmail icon">
-                </a>
-                <p>vadim.bakunovich@gmail.com</p>
-              </li>
-              <li>
+              <li class="item-m">
                 <a href="https://t.me/VadzimBA" target="_blank">
                   <img class="contacts__icon" src="assets/icons/contacts/telegram.svg" alt="telegram icon">
                 </a>
               </li>
+              <li class="contact-list__item item-m">
+                <a href="https://goo.gl/maps/yQppMAe5cjbPhpTp8" target="_blank">
+                  <img class="contacts__icon icon-mr" src="assets/icons/contacts/map.svg" alt="map icon">
+                </a>
+                <p class="contacts__text">Orsha, Belarus</p>
+              </li>
+              <li class="contact-list__item">
+                <a href="mailto:vadim.bakunovich@gmail.com">
+                  <img class="contacts__icon icon-mr" src="assets/icons/contacts/gmail.svg" alt="gmail icon">
+                </a>
+                <p class="contacts__text">vadim.bakunovich@gmail.com</p>
+              </li>
             </ul>
-          </section>
+        </section>
       </main>
       <footer class="footer">
           <a class="ref" href="https://rs.school/js/" target="_blank">
