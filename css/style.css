@@ -269,7 +269,10 @@ section {
 .tech-logo { height: 40px; }
 .js-logo { margin-left: 6px; }
                                           /*Contacts section*/
-.contacts { border-top: 1px solid var(--orange); }
+.contacts {
+  border-top: 1px solid var(--orange);
+  border-bottom: 1px solid var(--orange);
+}
 .contacts__list {
   display: flex;
   padding-left: 40px;
@@ -289,6 +292,13 @@ section {
   filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.8)) brightness(1.2);
   transform: scale(1.05);
 }
+.video-wrp {
+  padding: 5% 0 5% 4%;
+}
+.video {
+  width: 80%;
+  height: 100%;
+}
                                           /*Footer*/
 .footer {
   padding: 30px;
@@ -297,7 +307,12 @@ section {
   justify-content: space-between;
   border-top: 1px solid var(--orange);
 }
-.footer__logo { height: 40px; }
+.footer__logo {
+  height: 40px;
+  filter: drop-shadow(1px 1px 1px var(--orange));
+  transition: transform 300ms;
+}
+.footer__logo:hover { transform: scale(1.05); }
 .footer__link {
   display: flex;
   align-items: center;
