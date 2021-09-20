@@ -292,12 +292,11 @@ section {
   filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.8)) brightness(1.2);
   transform: scale(1.05);
 }
-.video-wrp {
-  padding: 5% 0 5% 4%;
-}
+.video-wrp { padding: 5% 0 5% 4%; }
 .video {
   width: 80%;
   height: 100%;
+  border: none;
 }
                                           /*Footer*/
 .footer {
