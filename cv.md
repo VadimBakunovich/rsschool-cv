@@ -8,7 +8,7 @@ JUNIOR FRONT-END DEVELOPER
 
 -  **E-mail**: vadim.bakunovich@gmail.com
 
--  **Phone number**: +375(29)7110267
+-  **Phone number**: +375(29)XXXXXXX
 
 ## About me
 
